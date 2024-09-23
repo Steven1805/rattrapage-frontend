@@ -1,10 +1,8 @@
 import { useState } from 'react';
 
 const Entry = () => {
-  // State for the dropdown select
   const [selectedPatrimoine, setSelectedPatrimoine] = useState('Crésus');
 
-  // State for the checkboxes
   const [checkboxes, setCheckboxes] = useState({
     agregat: true,
     tresorerie: true,
@@ -12,18 +10,15 @@ const Entry = () => {
     obligations: true,
   });
 
-  // State for the date pickers
   const [dateRange, setDateRange] = useState({
     startDate: '2024-07-01',
     endDate: '2024-07-16',
   });
 
-  // Handle change for dropdown
   const handleSelectChange = (e) => {
     setSelectedPatrimoine(e.target.value);
   };
 
-  // Handle change for checkboxes
   const handleCheckboxChange = (e) => {
     setCheckboxes({
       ...checkboxes,
@@ -31,7 +26,6 @@ const Entry = () => {
     });
   };
 
-  // Handle date change
   const handleDateChange = (e) => {
     setDateRange({
       ...dateRange,
