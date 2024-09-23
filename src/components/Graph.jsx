@@ -104,7 +104,7 @@ const options = {
 
 const Graph = () => {
   return (
-    <div style={{ width: '700px', height: '600px', marginTop: '-50px', marginLeft: '10px', border: '2px black solid' }}>
+    <div style={{ width: '700px', height: '600px', marginTop: '-50px', marginLeft: '10px' }}>
       <Line data={data} options={options} />
     </div>
   );
