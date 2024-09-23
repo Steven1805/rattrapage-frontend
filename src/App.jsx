@@ -1,5 +1,8 @@
 import Entry from './components/Entry'
+import Legends from './components/Legends';
 import OutputText from './components/OutputText'
+import Graph from './components/Graph'
+import "./styles.css"
 
 function App() {
     const lines = [
@@ -14,15 +17,26 @@ function App() {
 
   return (
     <>
-    <div style={{border: "none", backgroundColor: "	#E8E8E8", maxWidth:"510px", padding:"5px", marginTop:"-10px", marginLeft:"-10px"}}>
-      <Entry />
+    <div className='App' style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
+      <div style={{border: "none", backgroundColor: "	#E8E8E8", maxWidth:"430px", minWidth:"430px", padding:"5px", marginTop:"-10px", marginLeft:"-10px"}}>
+        <Entry />
 
-      <div style={{border: "1px solid grey", backgroundColor: "white", maxWidth:"500px", height:"200px", marginBottom:"5px" }}>
-        <OutputText title={"FLUX IMPOSSIBLES"} lines={lines} />
+        <div style={{border: "1px solid grey", backgroundColor: "white", maxWidth:"500px", height:"200px", marginBottom:"5px" }}>
+          <OutputText title={"FLUX IMPOSSIBLES"} lines={lines} />
+        </div>
+
+        <div style={{border: "1px solid grey", backgroundColor: "white", maxWidth:"500px", height:"400px" }}>
+          <OutputText title={"FLUX JOURNALIERS"} lines={lines2} />
+        </div>
       </div>
 
-      <div style={{border: "1px solid grey", backgroundColor: "white", maxWidth:"500px", height:"400px" }}>
-        <OutputText title={"FLUX JOURNALIERS"} lines={lines2} />
+
+      <div >
+        <Graph />
+      </div>
+
+      <div>
+        <Legends />
       </div>
     </div>
     </>
