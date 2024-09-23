@@ -1,8 +1,9 @@
-//import React from 'react'
+import "../styles.css"
 
 const Header = () => {
   return (
-    <div>Hello World</div>
+    <div className="title"
+    >Hello Worldee</div>
   )
 }
 

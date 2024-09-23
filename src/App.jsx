@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import Header from './components/Header'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Entry from './components/Entry'
+import OutputText from './components/OutputText'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const lines = [
+      "[2024-07-14][IBP Cresus & Cesar-- 8970g] (Néri, -5000) (Hita, -1000) (Raliz, -7000)"
+    ];
+    const lines2 = [
+      "[2024-07-14][IBP Cresus & Cesar-- 8970g] (Néri, -5000) (Hita, -1000) (Raliz, -7000)",
+      "[2024-07-14][IBP Cresus & Cesar-- 8970g] (Néri, -5000) (Hita, -1000) (Raliz, -7000)",
+      "[2024-07-14][IBP Cresus & Cesar-- 8970g] (Néri, -5000) (Hita, -1000) (Raliz, -7000)",
+      "[2024-07-14][IBP Cresus & Cesar-- 8970g] (Néri, -5000) (Hita, -1000) (Raliz, -7000)"
+    ];
 
   return (
     <>
-    <Header />
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{border: "none", backgroundColor: "	#E8E8E8", maxWidth:"510px", padding:"5px", marginTop:"-10px", marginLeft:"-10px"}}>
+      <Entry />
+
+      <div style={{border: "1px solid grey", backgroundColor: "white", maxWidth:"500px", height:"200px", marginBottom:"5px" }}>
+        <OutputText title={"FLUX IMPOSSIBLES"} lines={lines} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div style={{border: "1px solid grey", backgroundColor: "white", maxWidth:"500px", height:"400px" }}>
+        <OutputText title={"FLUX JOURNALIERS"} lines={lines2} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </div>
     </>
   )
 }
